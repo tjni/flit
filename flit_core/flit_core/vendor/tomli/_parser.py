@@ -1,5 +1,4 @@
 import string
-from types import MappingProxyType
 import warnings
 
 from ._re import (
@@ -29,7 +28,7 @@ BARE_KEY_CHARS = frozenset(string.ascii_letters + string.digits + "-_")
 KEY_INITIAL_CHARS = BARE_KEY_CHARS | frozenset("\"'")
 HEXDIGIT_CHARS = frozenset(string.hexdigits)
 
-BASIC_STR_ESCAPE_REPLACEMENTS = MappingProxyType(
+BASIC_STR_ESCAPE_REPLACEMENTS = (
     {
         "\\b": "\u0008",  # backspace
         "\\t": "\u0009",  # tab
