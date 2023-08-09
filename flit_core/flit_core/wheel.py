@@ -10,13 +10,27 @@ import os.path as osp
 import stat
 import tempfile
 from pathlib import Path
-from types import SimpleNamespace
 import zipfile
 
 from flit_core import __version__
 from . import common
 
 log = logging.getLogger(__name__)
+
+
+class SimpleNamespace:
+    def __init__(self, /, **kwargs):
+        self.__dict__.update(kwargs)
+
+    def __repr__(self):
+        items = (f"{k}={v!r}" for k, v in self.__dict__.items())
+        return "{}({})".format(type(self).__name__, ", ".join(items))
+
+    def __eq__(self, other):
+        if isinstance(self, SimpleNamespace) and isinstance(other, SimpleNamespace):
+           return self.__dict__ == other.__dict__
+        return NotImplemented
+
 
 wheel_file_template = u"""\
 Wheel-Version: 1.0
