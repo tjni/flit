@@ -10,9 +10,6 @@ import ntpath
 import os
 import posixpath
 import re
-from typing import (
-    TypeVar, Type, Union, Text, Tuple, List, Any, Callable, Iterable, Optional
-)
 
 import six
 import sys
@@ -156,9 +153,6 @@ def _try_except_filenotfounderror(
                 raise
             else:
                 except_func(exc)
-
-
-_T = TypeVar("_T")
 
 
 def _try_except_permissionerror_iter(
@@ -893,9 +887,6 @@ class _PathParents(Sequence):
 
     def __repr__(self):
         return "<{0}.parents>".format(self._pathcls.__name__)
-
-
-_P = TypeVar("_P", bound="PurePath")
 
 
 class PurePath(object):
