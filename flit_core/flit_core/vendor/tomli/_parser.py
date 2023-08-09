@@ -1,6 +1,5 @@
 import string
 from types import MappingProxyType
-from typing import NamedTuple
 import warnings
 
 from ._re import (
@@ -224,9 +223,10 @@ class NestedDict:
             cont[last_key] = [{}]
 
 
-class Output(NamedTuple):
-    data: NestedDict
-    flags: Flags
+class Output:
+    def __init__(self, data, flags):
+        self.data = data
+        self.flags = flags
 
 
 def skip_chars(src, pos, chars):
