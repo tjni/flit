@@ -6,7 +6,7 @@ import io
 import logging
 import os
 import os.path as osp
-from pathlib import Path
+from .vendor.pathlib2 import Path
 from posixpath import join as pjoin
 import tarfile
 

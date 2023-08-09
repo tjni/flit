@@ -5,7 +5,7 @@ import logging
 import os
 import sys
 
-from pathlib import Path
+from .vendor.pathlib2 import Path
 import re
 
 log = logging.getLogger(__name__)

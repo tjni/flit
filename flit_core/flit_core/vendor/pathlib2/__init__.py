@@ -11,7 +11,7 @@ import os
 import posixpath
 import re
 
-import six
+from .. import six
 import sys
 
 from errno import EINVAL, ENOENT, ENOTDIR, EBADF
@@ -54,7 +54,7 @@ else:
 try:
     from os import scandir as os_scandir  # type: ignore
 except ImportError:
-    from scandir import scandir as os_scandir  # type: ignore
+    from ..scandir import scandir as os_scandir  # type: ignore
 
 __all__ = [
     "PurePath", "PurePosixPath", "PureWindowsPath",

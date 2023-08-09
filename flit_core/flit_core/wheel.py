@@ -9,7 +9,7 @@ import os
 import os.path as osp
 import stat
 import tempfile
-from pathlib import Path
+from .vendor.pathlib2 import Path
 import zipfile
 
 from flit_core import __version__

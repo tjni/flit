@@ -1,7 +1,7 @@
 import email.parser
 import email.policy
 from io import StringIO
-from pathlib import Path
+from flit_core.vendor.pathlib2 import Path
 import pytest
 from unittest import TestCase
 

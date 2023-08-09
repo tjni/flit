@@ -1,5 +1,5 @@
 import logging
-from pathlib import Path
+from flit_core.vendor.pathlib2 import Path
 import pytest
 
 from flit_core import config

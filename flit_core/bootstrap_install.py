@@ -14,7 +14,7 @@ site-packages or equivalent directory with the --installdir option.
 import argparse
 import sys
 import sysconfig
-from pathlib import Path
+from flit_core.vendor.pathlib2 import Path
 from zipfile import ZipFile
 
 def extract_wheel(whl_path, dest):

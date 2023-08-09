@@ -1,4 +1,4 @@
-from pathlib import Path
+from flit_core.vendor.pathlib2 import Path
 from zipfile import ZipFile
 
 from testpath import assert_isfile

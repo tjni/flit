@@ -3,7 +3,7 @@ import logging
 import io
 import os
 import os.path as osp
-from pathlib import Path
+from .vendor.pathlib2 import Path
 
 from .common import (
     Module, make_metadata, write_entry_points, dist_info_name,

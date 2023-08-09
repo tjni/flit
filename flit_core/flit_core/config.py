@@ -4,7 +4,7 @@ import errno
 import logging
 import os
 import os.path as osp
-from pathlib import Path
+from .vendor.pathlib2 import Path
 import re
 
 try:

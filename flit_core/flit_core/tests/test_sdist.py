@@ -1,6 +1,6 @@
 from io import BytesIO
 import os.path as osp
-from pathlib import Path
+from flit_core.vendor.pathlib2 import Path
 import tarfile
 from testpath import assert_isfile
 
