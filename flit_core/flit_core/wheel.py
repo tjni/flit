@@ -11,7 +11,6 @@ import stat
 import tempfile
 from pathlib import Path
 from types import SimpleNamespace
-from typing import Optional
 import zipfile
 
 from flit_core import __version__
@@ -37,7 +36,7 @@ def _set_zinfo_mode(zinfo, mode):
     zinfo.external_attr = mode << 16
 
 
-def zip_timestamp_from_env() -> Optional[tuple]:
+def zip_timestamp_from_env():
     """Prepare a timestamp from $SOURCE_DATE_EPOCH, if set"""
     try:
         # If SOURCE_DATE_EPOCH is set (e.g. by Debian), it's used for

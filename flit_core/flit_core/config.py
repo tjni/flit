@@ -427,7 +427,7 @@ def _check_list_of_str(d, field_name):
             "{} field should be a list of strings".format(field_name)
         )
 
-def read_pep621_metadata(proj, path) -> LoadedConfig:
+def read_pep621_metadata(proj, path):
     lc = LoadedConfig()
     md_dict = lc.metadata
 
@@ -633,7 +633,7 @@ def read_pep621_metadata(proj, path) -> LoadedConfig:
 
     return lc
 
-def pep621_people(people, group_name='author') -> dict:
+def pep621_people(people, group_name='author'):
     """Convert authors/maintainers from PEP 621 to core metadata fields"""
     names, emails = [], []
     for person in people:

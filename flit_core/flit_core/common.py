@@ -413,7 +413,7 @@ def make_metadata(module, ini_info):
 
 
 
-def normalize_dist_name(name: str, version: str) -> str:
+def normalize_dist_name(name, version):
     """Normalizes a name and a PEP 440 version
 
     The resulting string is valid as dist-info folder name

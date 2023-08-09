@@ -84,7 +84,7 @@ class SdistBuilder:
         self.excludes = FilePatterns(exclude_patterns, str(cfgdir))
 
     @classmethod
-    def from_ini_path(cls, ini_path: Path):
+    def from_ini_path(cls, ini_path):
         # Local import so bootstrapping doesn't try to load toml
         from .config import read_flit_config
         ini_info = read_flit_config(ini_path)
